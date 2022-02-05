@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* body{
+    background: #005C97;  
+background: -webkit-linear-gradient(to right, #363795, #005C97);  
+background: linear-gradient(to right, #363795, #005C97); 
+} */
+
+.titulo{
+    font-size: 1.8rem;
+    font-family: 'Raleway', sans-serif;
+}

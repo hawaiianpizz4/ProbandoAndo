@@ -1,0 +1,10 @@
+body{
+    height: 30px;
+}
+
+.nav-link{
+    margin-left: 8.5px;
+}
+#logOut{
+    color:#C84B31;
+}

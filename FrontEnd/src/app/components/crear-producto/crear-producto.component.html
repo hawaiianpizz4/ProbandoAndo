@@ -1,0 +1,70 @@
+<div class="container-general">
+    <div class="container1">
+        
+        <!--header area start-->
+        <!--header area end-->
+        <!--sidebar start-->
+        
+           <div class="sidebar">
+             <a href="#"><i class="fas fa-info"></i><span>Información</span></a>
+             <a routerLink="/crear-producto" routerLinkActive="active"><i class="fas fa-calendar-plus"></i><span>Crear Ruta</span></a>
+             <a routerLink="/listar-producto" routerLinkActive="active"><i class="fas fa-car"></i><span>Listado de Rutas</span></a>
+             <a routerLink="/listar-producto-edicion" routerLinkActive="active"><i class="fas fa-edit"></i><span>Editar Listado de Rutas</span></a>
+             <a href="#"><i class="fas fa-user-plus"></i><span>Crear Usuario</span></a>
+             <a href="#"><i class="fas fa-users"></i><span>Listado de Usuarios</span></a>
+            
+           <!--sidebar end-->
+           </div>
+      
+      </div>
+<div class="container2">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">{{titulo}}</span>
+                    <form class="mt-3" [formGroup]="productoForm" (ngSubmit)="agregarProducto()">
+                        <div class="mb-3">
+                            <input type="text" formControlName="producto" 
+                            class="form-control form-control-lg" placeholder="Nombre del conductor">
+                            <div class="text-danger"
+                            *ngIf="productoForm.get('producto')?.hasError('required') && productoForm.get('producto')?.touched">
+                                <span>El nombre del conductor <strong> es obligatorio</strong></span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="categoria"
+                            class="form-control form-control-lg" placeholder="Teléfono del Conductor">
+                            <div class="text-danger"
+                            *ngIf="productoForm.get('categoria')?.hasError('required') && productoForm.get('categoria')?.touched">
+                                <span>Su teléfono de contacto<strong> es obligatorio</strong></span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="ubicacion"
+                            class="form-control form-control-lg" placeholder="Punto de encuentro para los pasajeros">
+                            <div class="text-danger"
+                            *ngIf="productoForm.get('ubicacion')?.hasError('required') && productoForm.get('ubicacion')?.touched">
+                                <span>El punto de encuentro <strong> es obligatorio</strong></span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="number" formControlName="precio"
+                            class="form-control form-control-lg" placeholder="Estimación de Costo al mes">
+                            <div class="text-danger"
+                            *ngIf="productoForm.get('precio')?.hasError('required') && productoForm.get('precio')?.touched">
+                                <span>La estimación del precio<strong> es obligatoria</strong></span>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <button routerLink="/listar-producto" class="btn btn-secondary btn-lg float-start">Volver</button>
+                            <button type="submit" [disabled]="productoForm.invalid" class="btn btn-success btn-lg float-end">Aceptar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

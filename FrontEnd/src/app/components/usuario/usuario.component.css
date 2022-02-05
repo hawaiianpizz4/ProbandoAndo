@@ -1,0 +1,16 @@
+.text-danger{
+    text-align: start;
+    margin-left: 2px;
+}
+
+.container{
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(39, 39, 39, 0.631) 0%, hsla(284, 5%, 39%, 0.514) 100%), url(/assets/usuarios.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container{
+    padding-top: 80px;
+}

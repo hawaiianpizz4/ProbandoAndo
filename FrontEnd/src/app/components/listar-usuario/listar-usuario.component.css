@@ -1,0 +1,23 @@
+.fas{
+    cursor: pointer;
+    margin-left: 8px;
+}
+.fas{
+    color: #35858B;
+}
+
+.fa-user-plus{
+    color:#fff;
+    margin-right: 4px;
+}
+.container{
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(39, 39, 39, 0.631) 0%, hsla(284, 5%, 39%, 0.514) 100%), url(/assets/listado-usuario.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.container{
+    padding-top: 200px;
+}

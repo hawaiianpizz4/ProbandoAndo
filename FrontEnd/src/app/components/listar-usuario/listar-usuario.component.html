@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="titulo">Listado de Usuario</span>
+                    <button class="btn btn-success float-end" routerLink="/usuario"><i class="fas fa-user-plus"></i></button>
+                    <table *ngIf="listUsuarios.length > 0" class="table table-striped mt-3">
+                        <thead>
+                          <tr>
+                            <th scope="col">Nombre de Usuario</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Login</th>
+                            <th scope="col">Password</th>
+                            <th scope="col">Acciones</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let persona of listUsuarios">
+                          <td>{{persona.nombre}}</td>
+                          <td>{{persona.email}}</td>
+                          <td>{{persona.nombreusuario}}</td>
+                          <td>{{persona.password}}</td>
+                          <td>
+                            <i [routerLink]="['/editar-usuario', persona._id]" class="fas fa-user-edit"></i>
+                            <i (click)="eliminarUsuario(persona._id)" class="fas fa-user-times text-danger"></i>
+                          </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <h5 style="text-align: start; margin-top: 10px;" *ngIf="listUsuarios.length == 0">No hay productos para mostrar</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
